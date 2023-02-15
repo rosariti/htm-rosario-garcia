@@ -18,7 +18,7 @@ var cartasEscojidasId = [];
 var cartasGanadas = [];
 
 function creartablero() {
-  for (let i =0 ;)
+  for (let i =0 ; i < cardAdj.length; i ++){
   var carta = document.createElement(`img`);
   carta.setAttribute("src", "imagenes/reverso.jpg");
   carta.setAttribute("dta-id", i);
