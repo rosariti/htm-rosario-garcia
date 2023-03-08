@@ -25,5 +25,17 @@ function creartablero() {
   carta.addEventListener("click", voltercarta);
   cuadricula.appendChild(carta);
 }
+ 
+function voltearCarta(){
+  var cardId= this .getAttribute("data-id");
+cartasEscojidas.push(cardsAdj[cardId].name);
+cartasEscojidasId.push(cardId);
+this.setAttribute("src",cardsAdj[cardId].img);
+if(cartasEscojidas.length === 2  ){
+  setTimeout(verificarPareja, 1000 );
+    
+}
 
+}
+creartablero();
 });
