@@ -35,7 +35,6 @@ if(cartasEscojidas.length === 2  ){
   setTimeout(verificarPareja, 1000 );
     
 }
-
 }
 creartablero();
 });
