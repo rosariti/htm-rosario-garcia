@@ -1,4 +1,4 @@
-document.addEventListener("DOMcontentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const cardsAdj = [
     { name: "icaro", img: "images/1 icaro.jpg" },
     { name: "manos", img: "images/2 manos.jpg" },
@@ -15,7 +15,7 @@ document.addEventListener("DOMcontentLoaded", () => {
   ];
 
   //console.log(cartasrr)
-  const cuadricula = document.querySelector(".cudricula");
+  const cuadricula = document.querySelector(".cuadricula");
   const resultado = document.querySelector("#resultado");
   var cartasEscojidas = [];
   var cartasEscojidasId = [];
