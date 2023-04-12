@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cartasEscojidas = [];
     cartasEscojidasId = [];
 
-    resultado.textContent === cartasGanadas.length;
+    resultado.textContent = cartasGanadas.length;
 
     if (cartasGanadas.length === cardsAdj.length / 2) {
       resultado.textContent = "!FELICIDADES,encontrastes todos los pares!";
