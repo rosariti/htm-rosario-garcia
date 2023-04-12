@@ -30,37 +30,36 @@ document.addEventListener("DOMContentLoaded", () => {
       cuadricula.appendChild(carta);
     }
   }
-function verificarPareja(){
- var cards = document.querySelectorAll("img");
- const opcionUnoId=cartasEscojidasId[0];
- const opcionDosId=cartasEscojidasId[1];
+  function verificarPareja() {
+    var cards = document.querySelectorAll("img");
+    const opcionUnoId = cartasEscojidasId[0];
+    const opcionDosId = cartasEscojidasId[1];
 
- if(opcionUnoId === opcionDoSId)
- cards[opcionUnoId].setAttribute("src","imagenes/reverso.png");
- cards[opcionDosId].setAttribute("src","imagenes/reverso.png");
-alert("!diste click a la misma imagen!");
-}
-else if (cartasEscojidas[0] === cartasEscojidas[1]){
-alert("!correcto!");
-cards[opcionUnoId].setAttribute("src","imagenes/blank.png");
-cards[opcionDosId].setAttribute("src","imagenes/blank.png");
-cards[opcionUnoId].removeEventListener("click",voltearCarta);
-cards[opcionDosId].removeEventListener("click",voltearCarta);
-cartasGanadas.push(cartasEscojidas);
-} else {
-cards[opcionUnoId].setAttribute("src","imagenes/reverso.png");
-cards[opcionDosId].setAttribute("src","imagenes/reverso.png");
-    alert("!INTENTA DE NUEVO!")
-}
-cartasEscojidas =[];
-cartasEscojidasId =[];
+    if (opcionUnoId === opcionDosId) {
+      cards[opcionUnoId].setAttribute("src", "imagenes/reverso.png");
+      cards[opcionDosId].setAttribute("src", "imagenes/reverso.png");
+      alert("!diste click a la misma imagen!");
+    } else if (cartasEscojidas[0] === cartasEscojidas[1]) {
+      alert("!correcto!");
+      cards[opcionUnoId].setAttribute("src", "imagenes/blank.png");
+      cards[opcionDosId].setAttribute("src", "imagenes/blank.png");
+      cards[opcionUnoId].removeEventListener("click", voltearCarta);
+      cards[opcionDosId].removeEventListener("click", voltearCarta);
+      cartasGanadas.push(cartasEscojidas);
+    } else {
+      cards[opcionUnoId].setAttribute("src", "imagenes/reverso.png");
+      cards[opcionDosId].setAttribute("src", "imagenes/reverso.png");
+      alert("!INTENTA DE NUEVO!");
+    }
+    cartasEscojidas = [];
+    cartasEscojidasId = [];
 
-resultado.textContent == cartasGanadas.length;
+    resultado.textContent === cartasGanadas.length;
 
-if(cartasGanadas.length === cardsAdj.length / 2 ){
-  resultado.textContent= "!FELICIDADES,encontrastes todos los pares!";
-}
-}
+    if (cartasGanadas.length === cardsAdj.length / 2) {
+      resultado.textContent = "!FELICIDADES,encontrastes todos los pares!";
+    }
+  }
 
   function voltearCarta() {
     var cardId = this.getAttribute("data-id");
